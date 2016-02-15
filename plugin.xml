@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="org.apache.cordova.device" version="1.0.0">
+  <name>FileHasher</name>
+  <description>Cordova FileHasher Plugin</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,filehasher</keywords>
+  <js-module src="www/filehasher.js" name="fileHasher">
+    <clobbers target="fileHasher" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="FileHasher">
+        <param name="android-package" value="com.redhatmobile.cordova.plugins.filehasher.FileHasher"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </config-file>
+    <source-file src="src/android/FileHasher.java" target-dir="src/com/redhatmobile/cordova/plugins/filehasher" />
+<!--     <js-module src="www/filehasher.js" name="FileHasher">
+      <clobbers target="FileHasher" />
+    </js-module> -->
+   </platform>
+
+</plugin>
