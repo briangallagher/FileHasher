@@ -1,4 +1,4 @@
-function FileHasher() {}
+var FileHasher = function () {}
 
 FileHasher.prototype.hash = function (path, digestType, cb) {
   debugger;
@@ -13,4 +13,4 @@ FileHasher.prototype.hash = function (path, digestType, cb) {
   }, 'FileHasher', 'hash', [path, digestType]);
 };
 
-module.exports = new FileHasher();
+module.exports = FileHasher;
