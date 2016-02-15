@@ -19,9 +19,6 @@
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     </config-file>
     <source-file src="src/android/FileHasher.java" target-dir="src/com/redhatmobile/cordova/plugins/filehasher" />
-<!--     <js-module src="www/filehasher.js" name="FileHasher">
-      <clobbers target="FileHasher" />
-    </js-module> -->
    </platform>
 
 </plugin>
